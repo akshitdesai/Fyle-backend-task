@@ -1,1 +1,1 @@
-web: gunicorn fylebanks.wsgi
+web: gunicorn --pythonpath fylebanks fylebanks.wsgi
