@@ -15,8 +15,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://bankofindia-frontend.herokuapp.com/', 'http://localhost:3000/', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['https://bankofindia-frontend.herokuapp.com/', 'http://localhost:3000/', '127.0.0.1']
+ALLOWED_HOSTS=['*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
